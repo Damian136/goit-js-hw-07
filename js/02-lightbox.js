@@ -18,3 +18,12 @@ function createGalleryItem(item) {
 
      return galleryItem; 
   }
+  const galleryItemsElements = galleryItems.map(item => createGalleryItem(item));
+gallery.append(...galleryItemsElements);
+
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: '250',
+});
+
+console.log(galleryItems);
